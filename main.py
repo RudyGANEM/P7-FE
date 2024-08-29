@@ -9,18 +9,18 @@ It should contain the following endpoints:
 - ping: Check if the app is up and running.
 """
 
-import pickle, json,  joblib
-import pandas as pd
-from fastapi import FastAPI
-import uvicorn
-from colorama import init
-import shap
+#import pickle, json,  joblib
+#import pandas as pd
+#from fastapi import FastAPI
+#import uvicorn
+#from colorama import init
+#import shap
 import streamlit as st
 import requests
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 # create the FastAPI app
-app = FastAPI()
+#app = FastAPI()
 
     
 def get_pong():
