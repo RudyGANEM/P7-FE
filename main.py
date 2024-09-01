@@ -24,7 +24,7 @@ import requests
 
     
 def get_pong():
-    url = 'http://localhost:8080/ping'
+    url = 'https://p7-api.onrender.com/ping'
     response = requests.get(url)
     if response.status_code == 200:
         return response.text
@@ -34,7 +34,7 @@ def get_pong():
 
 
 def get_client_ids():
-    url = 'http://localhost:8080/list_client_ids'
+    url = 'https://p7-api.onrender.com/list_client_ids'
     response = requests.get(url)
     if response.status_code == 200:
         try:
@@ -47,7 +47,7 @@ def get_client_ids():
 
 
 def get_summarize():
-    url = 'http://localhost:8080/summarize'
+    url = 'https://p7-api.onrender.com/summarize'
     response = requests.get(url)
     if response.status_code == 200:
         try:
@@ -60,7 +60,7 @@ def get_summarize():
     
     
 def get_client_info(client_id):
-    url = 'http://localhost:8080/client_info/' + str(client_id)
+    url = 'https://p7-api.onrender.com/client_info/' + str(client_id)
     response = requests.get(url)
     if response.status_code == 200:
         try:
@@ -72,7 +72,7 @@ def get_client_info(client_id):
     
     
 def get_predict(client_id):
-    url = 'http://localhost:8080/predict/' + str(client_id)
+    url = 'https://p7-api.onrender.com/predict/' + str(client_id)
     response = requests.get(url)
     if response.status_code == 200:
         try:
@@ -85,7 +85,7 @@ def get_predict(client_id):
     
     
 def get_explanation(client_id):
-    url = 'http://localhost:8080/explanation/' + str(client_id)
+    url = 'https://p7-api.onrender.com/explanation/' + str(client_id)
     response = requests.get(url)
     if response.status_code == 200:
         try:
@@ -103,7 +103,7 @@ def get_explanation(client_id):
 st.sidebar.title("Project 7")
 
 
-url = 'http://localhost:8080/list_client_ids'
+url = 'https://p7-api.onrender.com/list_client_ids'
 response = requests.get(url)
 list_client_ids = response.json()['client_ids']
 
