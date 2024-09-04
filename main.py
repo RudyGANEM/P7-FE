@@ -137,9 +137,18 @@ st.write(get_explanation(valeur_choisie))
     
 # bar plot graph
 fig, ax = plt.subplots()
+
+# Obtenir les données
 data = get_explanation(valeur_choisie)
-keys = list(data.keys())
-values = list(data.values())
+
+# Trier les données par ordre décroissant des valeurs
+sorted_data = dict(sorted(data.items(), key=lambda item: item[1], reverse=True))
+
+# Extraire les clés et les valeurs triées
+keys = list(sorted_data.keys())
+values = list(sorted_data.values())
+
+# Tracer le graphique en barres
 ax.bar(keys, values)
 ax.set_xlabel('Keys')
 ax.set_ylabel('Values')
