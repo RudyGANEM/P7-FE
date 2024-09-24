@@ -126,9 +126,9 @@ st.write("### Prediction")
 st.write(get_predict(valeur_choisie))
 prediction = get_predict(valeur_choisie)
 if prediction['prediction']==0:
-    st.write("You do not have your credit")
-else:
     st.write("You have your credit")
+else:
+    st.write("You do not have your credit")
 
 
 
